@@ -1,0 +1,482 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* ------------------Обнуление---------------------*/
+/* --------------Обнуление----------------*/
+@font-face {
+  font-family: "Code";
+  src: url("../fonts/9581.eot");
+  src: local("☺"), url("../fonts/9581.woff") format("woff"), url("../fonts/9581.ttf") format("truetype"), url("../fonts/9581.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* -------------Шрифты---------------- */
+body {
+  font-family: "Code";
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: "Code";
+  color: black;
+  font-size: 42px;
+  position: absolute;
+  top: 20px;
+  left: 42%;
+  color: white;
+  letter-spacing: 3px;
+  z-index: 1000;
+}
+
+.burger {
+  z-index: 1000;
+  height: 100px;
+  width: 100px;
+  background-color: #707070;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  display: block;
+}
+.burger .line__before {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  position: relative;
+  left: 35px;
+  top: 38px;
+}
+.burger .line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  position: relative;
+  top: 45px;
+  left: 35px;
+}
+.burger .line__after {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  position: relative;
+  left: 35px;
+  top: 52px;
+}
+
+.burger__onclick {
+  z-index: 999;
+  height: 100px;
+  width: 100px;
+  background-color: #555454;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  display: none;
+}
+.burger__onclick .line__before {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  position: relative;
+  left: 35px;
+  top: 38px;
+}
+.burger__onclick .line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  position: relative;
+  top: 45px;
+  left: 35px;
+}
+.burger__onclick .line__after {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  position: relative;
+  left: 35px;
+  top: 52px;
+}
+
+.burger__menu {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 120px;
+  z-index: 3000;
+  background-color: #5f5f5f;
+  padding: 20px 50px 100px 30px;
+}
+.burger__menu .cross__button {
+  cursor: pointer;
+}
+.burger__menu .cross {
+  position: relative;
+  z-index: 5000;
+  height: 20px;
+  width: 2px;
+  background-color: #fff;
+  top: 10px;
+  right: -130px;
+  transform: rotate(45deg);
+  padding: 1px;
+}
+.burger__menu .cross.second {
+  transform: rotate(135deg);
+  position: relative;
+  top: -10px;
+  height: 21px;
+}
+.burger__menu p {
+  color: #fff;
+  font-family: "Code";
+  margin-bottom: 15px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Слайдер */
+.slider {
+  position: relative;
+  min-width: 0;
+}
+.slider .slide img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 100;
+  font-size: 0;
+  background-color: yellow;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.slick-arrow.slick-prev {
+  left: 20px;
+  top: 50%;
+}
+.slick-arrow.slick-next {
+  right: 20px;
+  top: 50%;
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 -190px;
+}
+.slick-dots li {
+  list-style: none;
+  margin: 0 115px;
+}
+.slick-dots button {
+  font-size: 0;
+  max-width: 210px;
+  width: 100%;
+  height: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: absolute;
+  bottom: 4%;
+}
+.slick-dots .slick-active button {
+  background-color: #2ff72f;
+}
+
+.slider__button {
+  font-size: 19.6px;
+  display: inline-block;
+  position: relative;
+  bottom: 15%;
+  left: 42%;
+  z-index: 6000;
+  background-color: #363637;
+  color: rgba(255, 255, 255, 0.747);
+  padding: 20px 15px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* Слайдер */
+.strelochka {
+  background-color: #2ff72f;
+  position: absolute;
+  z-index: 6500;
+  right: 5%;
+  bottom: -55px;
+  padding: 25px 12px 0px 0px;
+  height: 110px;
+  cursor: pointer;
+}
+.strelochka .strelochka__raz {
+  position: relative;
+  left: -1.5px;
+  width: 30px;
+  height: 1px;
+  background-color: #fff;
+  transform: rotate(60deg);
+}
+.strelochka .strelochka__dva {
+  position: relative;
+  right: -13.5px;
+  width: 30px;
+  height: 1px;
+  background-color: #fff;
+  transform: rotate(120deg);
+}
+
+/* Текстовый блок */
+.block {
+  padding: 50px 60px 10px;
+}
+.block__container {
+  margin: 50px 60px 10px;
+}
+.block__middle_text {
+  margin-top: 90px;
+}
+.block__subtext {
+  margin-top: 90px;
+}
+.block__contacts {
+  margin-top: 90px;
+}
+
+.suptext__title {
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.suptext__flex {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.suptext__text {
+  flex: 0 1 29%;
+  font-family: Calibri;
+  font-size: 14px;
+  text-align: justify;
+  line-height: 2.5;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.middle_text__title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+.middle_text__flex {
+  display: flex;
+  justify-content: space-around;
+}
+.middle_text__div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.middle_text__subtitle {
+  font-size: 27px;
+  text-align: center;
+  font-weight: 400;
+  margin: 10px 0;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+}
+.middle_text__text {
+  font-family: Calibri;
+  font-size: 14px;
+  text-align: center;
+  line-height: 2.5;
+  font-weight: 700;
+  letter-spacing: 1px;
+  max-width: 300px;
+}
+
+.subtext__title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+.subtext__flex {
+  display: flex;
+  justify-content: space-between;
+}
+.subtext__image {
+  width: 232.4px;
+  height: 149.8px;
+}
+.subtext__text {
+  margin-bottom: 5px;
+  font-size: 19.6px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.subtext__button {
+  display: block;
+  background-color: #2e2e2e;
+  color: rgba(255, 255, 255, 0.836);
+  max-width: 220px;
+  width: 100%;
+  text-align: start;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.subtext__button:nth-child(2) {
+  padding-left: 5px;
+}
+.subtext__button:nth-child(3) {
+  padding-left: 7px;
+}
+.subtext__button:last-child {
+  padding-left: 7px;
+}
+
+.contacts__title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+.contacts__flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contacts__flex_inner {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  justify-content: space-between;
+}
+.contacts__map {
+  height: 200px;
+  flex: 0 1 35%;
+}
+.contacts__text {
+  flex: 1 1 50%;
+  font-family: Calibri;
+  font-size: 21px;
+  padding-top: 100px;
+  padding-left: 30px;
+  letter-spacing: 2px;
+  word-spacing: 9px;
+}
+.contacts__text p {
+  margin-bottom: 20px;
+}
+.contacts__text p:last-child {
+  margin: 0;
+}
+.contacts__text p:nth-child(2) {
+  word-spacing: 4px;
+}
+.contacts__media {
+  flex: 1 1 auto;
+  margin-top: 25px;
+  margin-left: 15px;
+}
+
+.footer {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 84px;
+  padding: 30px 0;
+}
+
+/* Текстовый блок */
