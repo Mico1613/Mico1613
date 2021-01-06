@@ -310,6 +310,9 @@ body{
 		font-weight: 700;
 		letter-spacing: 1px;
 		max-width: 300px;
+		&.correct {
+		margin-left: 25px;
+		}
 	}
 }
 
