@@ -382,6 +382,9 @@ body {
   letter-spacing: 1px;
   max-width: 300px;
 }
+.middle_text__text.correct {
+  margin-left: 25px;
+}
 
 .subtext__title {
   text-align: center;
