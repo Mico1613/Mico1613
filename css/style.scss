@@ -26,7 +26,7 @@ body{
 	z-index: 1000;
 }
 .burger{
-	z-index: 1000;
+	z-index: 1002;
 	height: 100px;
 	width: 100px;
 	background-color: rgb(112, 112, 112);
@@ -62,7 +62,7 @@ body{
 	}
 }
 .burger__onclick{
-	z-index: 999;
+	z-index: 1001;
 	height: 100px;
 	width: 100px;
 	background-color: rgb(85, 84, 84);
@@ -198,8 +198,8 @@ body{
 .slider__button{
 	font-size: 14px*1.4;
 	display: inline-block;
-	position: relative;
-	bottom: 15%;
+	position: absoluite;
+	bottom: 8%;
 	left: 42%;
 	z-index: 6000;
 	background-color: #363637;
